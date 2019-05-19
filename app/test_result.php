@@ -9,8 +9,8 @@ class TestResult{
 	}
 
 
-	public function load(){
-		$this->rows = $this->db->myQuery("select * from test_result")->getResult();
+	public function load($sql){
+		$this->rows = $this->db->myQuery($sql)->getResult();
 		return $this;
 	}
 
